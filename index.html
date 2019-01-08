@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mood Slider</title>
+        <link rel="icon" type="image/png" href="images/skylogo.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+        <script src="js/script.js"></script>
+
+    </head>
+    <body onload="initBody()">
+        <div id='body_div'>
+            <div class = 'flex_row'>
+                <div id = 'title_logo' >
+                        <img id='sky_logo' alt="Sky Logo" src="images/skylogo.png">
+                </div>
+                
+                <div class="title_col">
+                    <h1 class="title_row">Mood Slider</h1>
+                
+                    <div class="title_row ">
+                            <div class = 'title_text'>
+                                Moodslider
+                            </div>
+                            <div class = 'title_text' id='title_sep'>
+                                |
+                            </div>
+                            <label  id='upload_btn'>
+                                Upload Content
+                                <input id='UploadContent' type="file"  name='UploadContent' accept='text/xml' onchange='openFile(event)'>
+                            </label>
+                            
+                    </div>
+                
+                </div>
+            </div>
+                <!-- <p id='programxml'></p> -->
+                <div class = 'flex_mood_row'>
+                    <div class = 'flex_col'>
+                        <span class='mood_elem mood_name' onclick="activateMood('AgitatedCalm',0)">Agitated</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('HappySad',0)">Happy</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('TiredWideAwake',0)">Tired</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('ScaredFearless',0)">Scared</span>
+                    </div>
+                    <div class = 'flex_col' style="flex-grow: 1">
+                        <div class="mood_elem">
+                            <input type='range' min = '0' max = '2' step = '1' id='AgitatedCalm' 
+                                name = 'AgitatedCalm' class = 'slider' onchange="updateMood()">
+                        </div>
+                        <div class="mood_elem">
+                            <input type='range' min = '3' max = '5' step = '1' id='HappySad' 
+                                name = 'HappySad' class = 'slider ' onchange="updateMood()">
+                        </div>
+                        <div class="mood_elem">
+                        <input type='range' min = '6' max = '8' step = '1' id='TiredWideAwake' 
+                            name = 'TiredWideAwake' class = 'slider' onchange="updateMood()">
+                        </div>
+                        <div class="mood_elem">
+                                <input type='range' min = '9' max = '11' step = '1' id = 'ScaredFearless' 
+                                    name = 'ScaredFearless' class = 'slider' onchange="updateMood()">
+                        </div>
+                    </div>
+                    <div class = 'flex_col'>
+                        <span class='mood_elem mood_name' onclick="activateMood('AgitatedCalm',1)">Calm</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('HappySad',1)">Sad</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('TiredWideAwake',1)">Wide Awake</span>
+                        <span class='mood_elem mood_name' onclick="activateMood('ScaredFearless',1)">Fearless</span>
+                    </div>
+                </div>
+                
+                <div id='program_cards'>
+                    <div id='prog1' class='programs'>
+                        
+                    </div>
+                    <div id='prog2' class='programs'>
+                        
+                    </div>
+                    <div id='prog3' class='programs'>
+                        
+                    </div>
+                    <div id='prog4' class='programs'>
+                        
+                    </div>
+                    <div id='prog5' class='programs'>
+                        
+                    </div>
+                </div>
+            
+            <div class = 'button_row'>
+                <input class='my_btn' type='button' id='prev_page' value='previous page' onclick="prev_page()" >
+                
+                <input class='my_btn' type='button' id='shuffle' value='shuffle' onclick="shuffle()">
+
+                <input class='my_btn' type='button' id='next_page' value='next page' onclick="next_page()">
+            
+            </div>
+        
+        </div>
+    </body>
+</html>
