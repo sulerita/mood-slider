@@ -1,8 +1,7 @@
 ## Mood Slider Web App
 
 This simple application selects television programs based on the mood of the individual.
-
-![](https://github.com/sulerita/mood-slider/blob/master/test-moodSlider.gif)
+<img src="https://github.com/sulerita/mood-slider/blob/master/test-moodSlider.gif" width="300">
 
 ### Files Needed
 To run this application, you need:
