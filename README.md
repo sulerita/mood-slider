@@ -23,10 +23,13 @@ To run the App, follow these steps (also shown in [test-moodSlider.gif](https://
 
 1. Open [index.html](https://github.com/sulerita/mood-slider/blob/master/index.html) in a browser
 
-2. Click/tap rectangle containing the text: **Upload Content** to open a dialog box for selecting desired  XML-formatted list of programmes
+2. Click/tap rectangle containing the text: **Upload Content** which loads the xml contents into the browser
 
-3. Navigate to the project folder and select [programmesDB.xml](https://github.com/sulerita/mood-slider/blob/master/programmesDB.xml) file
+<!-- 3. Navigate to the project folder and select [programmesDB.xml](https://github.com/sulerita/mood-slider/blob/master/programmesDB.xml) file
 
-4. You should get an alert message telling you, you have successfully imported the file.
+4. You should get an alert message telling you, you have successfully imported the file. -->
 
 5. The programmes have now be set-up. You can interact with the application by clicking on different moods to show filtered programs and appropriate buttons to navigate through the list of programs
+
+## DISCLAIMER
+Sky logo and movie names and images are copyright of their respective owners.

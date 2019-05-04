@@ -4,7 +4,7 @@
 } */
 #body_div {
     display: flex;
-    max-width: 800px;
+    width: 600px;
     max-height: 200%;
     padding: 10px 0px;
     margin: auto;
@@ -173,6 +173,8 @@ h1{
 
 #upload_btn {
     padding: 2px;
+    /* width: 50%; */
+    height: 100%;
     /* border: 2px solid blue; */
     border-radius: 4px;
     /* background-image:radial-gradient(rgb(0, 0, 0) 0%,crimson,crimson); */
@@ -194,9 +196,11 @@ h1{
     font-size: 3em
 }
 
-/* .title_text {
-    padding: 0px;
-} */
+.title_text {
+    color: white;
+    font-family: sans-serif;
+    font-size: 1.1em;
+}
 .title_col {
     
     display: flex;
@@ -217,14 +221,15 @@ h1{
     vertical-align: middle;
     overflow: hidden;
     letter-spacing: 6px;
+    margin:auto;
     
 }
 
-#UploadContent {
+/* #UploadContent {
     width: 100%;
     height: 100%;
     display: none;
-}
+} */
 .my_btn{
     background-image: linear-gradient(to right, white, fuchsia, white);
     /* border: none; */

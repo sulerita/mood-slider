@@ -180,35 +180,15 @@ function activateMood(moodID, level){
     updateMood();
 }
     var openFile = function(event) {
+        fetch('https://raw.githubusercontent.com/sulerita/mood-slider/master/programmesDB.xml')
+        .then(res => res.text()) // Gets the response and returns it as a blob
+        .then(text => {
+            var parser = new DOMParser();
+            var xmlDoc = parser.parseFromString(text,"text/xml");
+            programs = xmlDoc.getElementsByTagName('programme');
+        });
         
-        var input = event.target;
-    
-        var reader = new FileReader();
-        reader.onload = function(){
-        var dataXML = reader.result;
-        // var output = document.getElementById('programxml');
-        // output.innerHTML = dataXML;
-        //console.log('dataXML ' + dataXML.toString());
-        var parser = new DOMParser();
-        var xmlDoc = parser.parseFromString(dataXML,"text/xml");
-        var scared = [];
-        programs = xmlDoc.getElementsByTagName('programme');
-        for (var i = 0; i < programs.length; i++){
-            if(programs[i].getElementsByTagName('mood')[0].innerHTML == 'Scared'){
-                scared.push(programs[i]);
-            }
-            //console.log('program mood' + programs[i].getElementsByTagName('mood')[0].toString());
-        }
-        //console.log('scared ' + scared.toString());
-
-        //console.log(xmlDoc.getElementsByTagName('mood')[0].innerHTML);
-        };
-    //console.log(input.files[0]);
-        if(input.files[0]){
-        alert(input.files[0].name + ' successfully imported. Click/tap OK to continue');
         resetMood();
-        reader.readAsText(input.files[0]);
-        }
         
     };
 function updateButtonStatus(){
